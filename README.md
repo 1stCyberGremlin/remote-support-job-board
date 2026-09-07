@@ -1,30 +1,27 @@
 # Remote Support Job Board
 
-A lightweight, mobile-friendly job board for fully remote customer support, product support, technical support, contract work, paid research, usability testing, and related flexible-income opportunities.
+A focused board for fully remote U.S. customer, product, technical, software,
+and application support roles. The site is hosted with GitHub Pages at no cost.
 
-## Included
+## How it works
 
-- Support Jobs, Gigs & Side Work, Saved, and Applied tabs
-- Search, salary, work-type, and source filters
-- $40,000 minimum filtering for jobs with published salary
-- Clear `Salary unavailable` labeling when compensation is not published
-- Local browser storage for saved and applied listings
-- Responsive GitHub Pages deployment
-- Direct employer links preferred
-- Indeed and Glassdoor excluded
+- Job listings refresh automatically every day at 6:00 AM Eastern.
+- Search, salary, support-channel, direct-link, and degree filters run in the browser.
+- Saved jobs, hidden jobs, applications, interviews, follow-ups, outcomes, and notes
+  are stored privately in the visitor's browser.
+- Clearing browser data or switching devices does not carry tracking data over.
 
-## Listing data
+## Local development
 
-Listings are stored in `data/listings.json`. The initial support-job cards are examples and must be replaced with verified live opportunities during the first live refresh. Official gig-platform links are included as starter entries.
+```bash
+npm ci
+npm run dev
+```
 
-## Publishing
+## Production build
 
-Open the repository's **Settings → Pages** and select **GitHub Actions** as the source. The included workflow deploys the site after each push to `main`.
+```bash
+npm run build
+```
 
-Expected public URL:
-
-`https://1stcybergremlin.github.io/remote-support-job-board/`
-
-## Important
-
-Always verify that a listing is still open and legitimate before applying or sharing sensitive information. Do not estimate salaries that employers have not published.
+The static site is generated in `out/` and deployed by the GitHub Actions workflow.
